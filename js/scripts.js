@@ -1,22 +1,22 @@
 $(document).ready(function() {
   $("form#pingpong").submit(function(event) {
     event.preventDefault();
+    $("#result").empty()
 
     var string = $("input#string").val();
     var number = parseInt(string);
     var array1 = [];
-    var html = ""
 
     for (i=1; i<=number; i++)
     array1.push(i);
 
     array1.forEach(function(array) {
       if ((array % 5 === 0) && (array % 3 === 0)) {
-        $("array").append("pingpong")
+        return "pingpong"
       } else if (array % 3 === 0) {
-        $("array").append("ping")
+        return "ping"
       } else if (array % 5 === 0) {
-        $("array").append("pong")
+        return "pong"
       } else {
         $("array").append(array)
       }
@@ -27,7 +27,6 @@ $(document).ready(function() {
     }
 
     $("#result").show()
-
     console.log(array1);
 
   });
