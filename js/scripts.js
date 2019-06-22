@@ -10,21 +10,22 @@ $(document).ready(function() {
     for (i=1; i<=number; i++)
     array1.push(i);
 
-    array1.forEach(function(array) {
-      if ((array % 5 === 0) && (array % 3 === 0)) {
-        $(".output").text("pingpong")
-      } else if (array % 3 === 0) {
-        $(".output").text("ping")
-      } else if (array % 5 === 0) {
-        $(".output").text("pong")
-      } else {
-        $(".output").text(array)
-      }
-    });
 
     for (var i =0; i < array1.length; i += 1) {
-      html += "<li>" + array1[i]+ "</li>";
+      $("#result").append("<li>" + array1[i] + "</li>")
     }
+
+    // array1.forEach(function(array) {
+    //   if ((array % 5 === 0) && (array % 3 === 0)) {
+    //     $("#result").append("pingpong")
+    //   } else if (array % 3 === 0) {
+    //     $("#result").append("ping")
+    //   } else if (array % 5 === 0) {
+    //     $("#result").append("pong")
+    //   } else {
+    //     $("#result").append(array)
+    //   }
+    // });
 
     $(".output").text(html);
     $("#result").show()
