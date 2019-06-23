@@ -10,19 +10,8 @@ $(document).ready(function() {
     for (i=1; i<=number; i++)
     array1.push(i);
 
-    // array1.forEach(function(array) {
-    //   if ((array % 5 === 0) && (array % 3 === 0)) {
-    //     $(array).append("pingpong");
-    //   } else if (array % 3 === 0) {
-    //     $(array).append("ping");
-    //   } else if (array % 5 === 0) {
-    //     $(array).append("pong");
-    //   } else {
-    //     $(array).append(array)
-    //   }
-    // });
 
-    array1.forEach(function(array) {
+    var array2 = array1.map(function(array) {
       if ((array % 5 === 0) && (array % 3 === 0)) {
         return "pingpong";
       } else if (array % 3 === 0) {
@@ -34,21 +23,12 @@ $(document).ready(function() {
       }
     });
 
-    for (var i =0; i < array1.length; i += 1) {
-      // if ((array1[i] % 5 === 0) && (array1[i] % 3 === 0)) {
-      //   array1[i] = "pingpong";
-      // } else if (array1[i] % 3 === 0) {
-      //   array1[i] = "ping"
-      // } else if (array1[i] % 3 === 0) {
-      //   array1[i] = "ping"
-      // } else {
-      //   return array1[i]
-      // }
-      $("#result").append("<li>" + array1[i] + "</li>")
+    for (var i =0; i < array2.length; i += 1) {
+      $("#result").append("<li>" + array2[i] + "</li>")
     }
 
     $("#result").show()
-    console.log(array1);
+    console.log(array2);
 
   });
 });
