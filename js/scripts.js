@@ -12,15 +12,27 @@ $(document).ready(function() {
 
     // array1.forEach(function(array) {
     //   if ((array % 5 === 0) && (array % 3 === 0)) {
-    //     return "pingpong"
+    //     $(array).append("pingpong");
     //   } else if (array % 3 === 0) {
-    //     return "ping"
+    //     $(array).append("ping");
     //   } else if (array % 5 === 0) {
-    //     return "pong"
+    //     $(array).append("pong");
     //   } else {
-    //     $("array").append(array)
+    //     $(array).append(array)
     //   }
     // });
+
+    array1.forEach(function(array) {
+      if ((array % 5 === 0) && (array % 3 === 0)) {
+        return "pingpong";
+      } else if (array % 3 === 0) {
+        return "ping";
+      } else if (array % 5 === 0) {
+        return "pong";
+      } else {
+        return array;
+      }
+    });
 
     for (var i =0; i < array1.length; i += 1) {
       // if ((array1[i] % 5 === 0) && (array1[i] % 3 === 0)) {
